@@ -1,0 +1,28 @@
+#!/bin/bash
+# Change the following values to suit your local setup.
+# The path where the commit info file will be stored.
+INFOPATH=suivi
+
+# Create the directory if it doesn't exist
+mkdir -p $INFOPATH
+
+read -p "Sauvegarde des informations de commit dans ce commit (y/[n]) ?" yn < /dev/tty
+yn=${yn:-n}
+
+case $yn in
+  [Yy]* )
+    # Get the current date and time
+    DATE_TIME=$(date "+%Y-%m-%d %H:%M:%S")
+    # Create the commit info file
+    echo "Commit vérifié le $DATE_TIME" > $INFOPATH/commitInfo.txt
+    git add $INFOPATH/commitInfo.txt
+    ;;
+  [Nn]* )
+    # Do nothing
+    ;;
+  *)
+    echo "Réponse non reconnue. Aucune action effectuée."
+    ;;
+esac
+
+exit 0
