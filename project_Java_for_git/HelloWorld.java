@@ -9,13 +9,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class HelloWorld {
-    public static void main(String[] args) {
-        // Créer et afficher l'interface utilisateur sur le thread de l'Event Dispatching
-        SwingUtilities.invokeLater(() -> {
-            // Créer la fenêtre
-            JFrame fenetre = new JFrame(Constantes.HELLO_WORLD_TITLE);
-            fenetre.setSize(600, 750); // Nouvelle taille de la fenêtre
-            fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        public static void main(String[] args) {
+                // Utilisation des constantes
+                JFrame fenetre = new JFrame(Constantes.HELLO_WORLD_TITLE);
+                fenetre.setSize(600, 750);
+                fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
             // Créer un panneau avec un FlowLayout pour aligner les labels horizontalement
             JPanel panel = new JPanel(new FlowLayout(FlowLayout.CENTER));
