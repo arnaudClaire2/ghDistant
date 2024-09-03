@@ -7,7 +7,7 @@ public class HelloWorld {
         public static void main(String[] args) {
                 // Utilisation des constantes
                 JFrame fenetre = new JFrame(Constantes.HELLO_WORLD_TITLE);
-                fenetre.setSize(500, 650);
+                fenetre.setSize(500, 750);
                 fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
                 JLabel label = new JLabel(Constantes.HELLO_WORLD_TEXT, SwingConstants.CENTER);
