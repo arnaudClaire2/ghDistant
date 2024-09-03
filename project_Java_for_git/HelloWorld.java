@@ -12,7 +12,7 @@ public class HelloWorld {
 
         JLabel label = new JLabel(Constantes.HELLO_WORLD_TEXT, SwingConstants.CENTER);
         label.setOpaque(true);
-        label.setBackground(Color.pink);
+        label.setBackground(Color.GREEN);
 
         fenetre.add(label);
         fenetre.setVisible(true);
